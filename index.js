@@ -6,8 +6,8 @@ app.use(express.json())
 app.get('/',(req,res)=>{
     res.send('hello world')
 })
+const Port=process.env.Port
 
-
-app.listen(5000,()=>{
+app.listen(Port,()=>{
     console.log("server start at 5000")
 })
