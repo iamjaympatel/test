@@ -1,13 +1,27 @@
-const express=require('express')
-const app=express();
+//mongo "mongodb+srv://cluster0.urri4.mongodb.net/<dbname>" --username iamjaypatel
 
 
-app.use(express.json())
+const express  = require("express");
+const app = express();
+
+const PORT  = process.env.PORT || 5000
+
+
+
+
+
+ if(process.env.NODE_ENV === 'production'){
+     
+     app.get('*',(req,res)=>{
+         res.send('hello world')
+     })
+ }
 app.get('/',(req,res)=>{
-    res.send('hello world')
+    res.send("it is by jay patel")
 })
-//const Port=process.env.Port || 5000
 
-app.listen(process.env.Port || 5000,()=>{
-    console.log("server start at 5000")
-})
+app.listen(PORT,()=>{
+    console.log("server running on "+ PORT)})
+
+
+    //mongodb+srv://iamjaypatel:<password>@cluster0.urri4.mongodb.net/<dbname>?retryWrites=true&w=majority
