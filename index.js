@@ -12,9 +12,9 @@ const PORT  = process.env.PORT || 5000
 
  if(process.env.NODE_ENV === 'production'){
      
- //    app.get('*',(req,res)=>{
-   //      res.send('hello world')
-     //})
+     app.get('*',(req,res)=>{
+         res.send('hello world')
+     })
  }
 app.get('/',(req,res)=>{
     res.send("it is by jay patel")
