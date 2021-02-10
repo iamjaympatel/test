@@ -4,12 +4,12 @@
 const express  = require("express");
 const app = express();
 
-//const PORT  = process.env.PORT || 5000
+const PORT  = process.env.PORT || 5000
 
 
 
 
-const Port=process.env.Port || 5000
+//const Port=process.env.Port || 5000
 
 app.use(express.json())
 
@@ -24,8 +24,8 @@ app.get('/',(req,res)=>{
     res.send("it is by jay patel")
 })
 
-app.listen(Port,()=>{
-    console.log("server running on "+ Port)})
+app.listen(PORT,()=>{
+    console.log("server running on "+ PORT)})
 
 
     //mongodb+srv://iamjaypatel:<password>@cluster0.urri4.mongodb.net/<dbname>?retryWrites=true&w=majority
